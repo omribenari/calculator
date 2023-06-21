@@ -11,6 +11,7 @@ interface Store {
   calcClear: () => void;
   log: Array<string>;
   addLog: (value: string) => void;
+  clearLog: () => void;
 }
 
 export const useStore = create<Store>()(
@@ -31,6 +32,7 @@ export const useStore = create<Store>()(
         }
         set(() => ({ log: log }));
       },
+      clearLog: () => set(() => ({ log: [] })),
     }),
     {
       name: 'calc-store',
