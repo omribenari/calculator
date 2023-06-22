@@ -6,6 +6,7 @@ interface Store {
   user: User | null;
   setUser: (user: User | null) => void;
   displayValue: string;
+  isResult: boolean;
   setResult: (value: string) => void;
   calcType: (value: string) => void;
   calcClear: () => void;
@@ -18,12 +19,14 @@ export const useStore = create<Store>()(
   persist(
     (set, get) => ({
       user: null,
+      isResult: false,
       setUser: (user) => set(() => ({ user })),
       displayValue: '',
-      setResult: (value) => set(() => ({ displayValue: value })),
+      setResult: (value) =>
+        set(() => ({ displayValue: value, isResult: true })),
       calcType: (value) =>
         set(() => ({ displayValue: get().displayValue + value })),
-      calcClear: () => set(() => ({ displayValue: '' })),
+      calcClear: () => set(() => ({ displayValue: '', isResult: false })),
       log: [],
       addLog: (value) => {
         let log = [...get().log, value];

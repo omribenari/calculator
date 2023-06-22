@@ -10,6 +10,7 @@ import { isEmail, matches, useForm } from '@mantine/form';
 import { login } from '../auth/auth';
 import { useStore } from '../store/useStore';
 import { useNavigate } from 'react-router-dom';
+import { showErrorToast } from '../utils/Toast';
 
 export function LoginPage() {
   const { setUser } = useStore();
@@ -38,7 +39,7 @@ export function LoginPage() {
       }
     } catch (error) {
       if (error instanceof Error) {
-        alert(error.message);
+        showErrorToast(error.message);
       }
     }
   };

@@ -5,7 +5,7 @@ import CalcButton from './CalcButton';
 const Calculator = () => {
   return (
     <Container w={300} mx="auto">
-      <Grid gutter={1.14}>
+      <Grid gutter={3}>
         <Grid.Col span={12}>
           <CalcDisplay />
         </Grid.Col>
@@ -57,6 +57,7 @@ const Calculator = () => {
         <Grid.Col span={3}>
           <CalcButton text="=" />
         </Grid.Col>
+        <Grid.Col span={12}></Grid.Col>
       </Grid>
     </Container>
   );

@@ -32,7 +32,7 @@ const useStyles = createStyles((theme) => ({
 export function AppHeader() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
-  const { classes, theme } = useStyles();
+  const { classes } = useStyles();
   const { user } = useStore();
 
   return (
@@ -73,17 +73,11 @@ export function AppHeader() {
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
-          <Divider
-            my="sm"
-            color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
-          />
+          <Divider my="sm" color={'gray.1'} />
 
           {<NavLinks />}
 
-          <Divider
-            my="sm"
-            color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
-          />
+          <Divider my="sm" color={'gray.1'} />
 
           <Group position="center" grow pb="xl" px="md">
             <UserDisplay />

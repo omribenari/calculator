@@ -5,22 +5,15 @@ function CalcDisplay() {
   const { displayValue } = useStore();
   return (
     <Text
-      title="CView"
-      truncate
+      title={displayValue}
       ta="right"
-      size={48}
+      size={36}
       px={5}
       lineClamp={1}
       sx={(theme) => ({
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.colors.dark[4]
-            : theme.colors.gray[2],
-        color:
-          theme.colorScheme === 'dark'
-            ? theme.colors.gray[5]
-            : theme.colors.gray[9],
-        height: 70,
+        backgroundColor: theme.colors.gray[2],
+        color: theme.colors.gray[9],
+        height: 55,
         borderRadius: 2,
       })}
     >

@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useStore } from '../store/useStore';
-import { Button, Container, Flex, Stack } from '@mantine/core';
+import { Button, Flex, List } from '@mantine/core';
 
 const HistoryPage = () => {
   const { log, clearLog } = useStore();
   const list = log.map((item, index) => {
-    return <div key={index}>{`${index}. ${item}`}</div>;
+    return <List.Item>{item}</List.Item>;
   });
+
+  const clearLogHandler = useCallback(() => {
+    clearLog();
+  }, [clearLog]);
 
   return (
     <>
-      <Stack align="flex-start" justify="flex-start" mx="lg">
+      <List type="ordered" withPadding>
         {list}
-      </Stack>
+      </List>
       <Flex justify="center" align="center" direction="row" wrap="wrap">
-        <Button variant="light" onClick={() => clearLog()}>
+        <Button variant="light" onClick={clearLogHandler}>
           Clear History
         </Button>
       </Flex>
