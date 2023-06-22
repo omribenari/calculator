@@ -4,7 +4,7 @@ import { X } from 'tabler-icons-react';
 
 export const showErrorToast = (message: string) => {
   notifications.show({
-    message: message,
+    message: message ? message : 'Error',
     icon: <X />,
     color: 'red',
   });

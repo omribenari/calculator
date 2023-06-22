@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="mantine-1grbdle"
+    >
+      <header
+        class="mantine-Header-root mantine-r9tegj"
+      >
+        <div
+          class="mantine-Group-root mantine-1vdqnc0"
+        >
+          <svg
+            class="icon icon-tabler icon-tabler-calculator"
+            fill="none"
+            height="30"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+              stroke="none"
+            />
+            <rect
+              height="18"
+              rx="2"
+              width="16"
+              x="4"
+              y="3"
+            />
+            <rect
+              height="3"
+              rx="1"
+              width="8"
+              x="8"
+              y="7"
+            />
+            <line
+              x1="8"
+              x2="8"
+              y1="14"
+              y2="14.01"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="14"
+              y2="14.01"
+            />
+            <line
+              x1="16"
+              x2="16"
+              y1="14"
+              y2="14.01"
+            />
+            <line
+              x1="8"
+              x2="8"
+              y1="17"
+              y2="17.01"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="17"
+              y2="17.01"
+            />
+            <line
+              x1="16"
+              x2="16"
+              y1="17"
+              y2="17.01"
+            />
+          </svg>
+          <div
+            class="mantine-Group-root mantine-dhrao7"
+          >
+            <button
+              class="mantine-UnstyledButton-root mantine-Button-root mantine-g7194"
+              data-button="true"
+              type="button"
+            >
+              <div
+                class="mantine-1wpc1xj mantine-Button-inner"
+              >
+                <span
+                  class="mantine-1ryt1ht mantine-Button-label"
+                >
+                  Log in
+                </span>
+              </div>
+            </button>
+          </div>
+          <button
+            class="mantine-UnstyledButton-root mantine-Burger-root mantine-1ctspuk"
+            type="button"
+          >
+            <div
+              class="mantine-zpoir7 mantine-Burger-burger"
+            />
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+</DocumentFragment>
+`;
