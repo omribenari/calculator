@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MantineProvider } from '@mantine/core';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Notifications } from '@mantine/notifications';
 
 const root = ReactDOM.createRoot(
@@ -12,12 +12,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <MantineProvider withGlobalStyles withNormalizeCSS>
         <Notifications />
         <App />
       </MantineProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 

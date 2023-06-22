@@ -1,11 +1,17 @@
 import React, { useCallback } from 'react';
 import { useStore } from '../store/useStore';
-import { Button, Flex, List } from '@mantine/core';
+import { Button, Flex, List, Badge } from '@mantine/core';
 
 const HistoryPage = () => {
   const { log, clearLog } = useStore();
   const list = log.map((item, index) => {
-    return <List.Item>{item}</List.Item>;
+    return (
+      <List.Item key={index}>
+        <Badge variant="filled" size="lg">
+          {item}
+        </Badge>
+      </List.Item>
+    );
   });
 
   const clearLogHandler = useCallback(() => {
@@ -14,7 +20,7 @@ const HistoryPage = () => {
 
   return (
     <>
-      <List type="ordered" withPadding>
+      <List type="ordered" withPadding size="lg">
         {list}
       </List>
       <Flex justify="center" align="center" direction="row" wrap="wrap">
