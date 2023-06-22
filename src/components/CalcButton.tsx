@@ -1,10 +1,8 @@
 import { Text } from '@mantine/core';
 import { useStore } from '../store/useStore';
-import { evaluate, format } from 'mathjs';
 import { showErrorToast } from '../utils/Toast';
 import { createStyles } from '@mantine/core';
-
-const operators = ['*', '+', '-', '%'];
+import CalcUtils from '../utils/calcUtils';
 
 const useStyles = createStyles((theme) => ({
   calcButton: {
@@ -41,9 +39,7 @@ function CalcButton({ text }: { text: string }) {
       switch (text) {
         case '=': {
           try {
-            if (displayValue === '') return;
-            let result = evaluate(displayValue);
-            result = format(result, { precision: 14 });
+            let result = CalcUtils.evaluateExpression(displayValue);
             setResult(result);
           } catch (e) {
             if (e instanceof Error) showErrorToast(e.message);
@@ -58,20 +54,15 @@ function CalcButton({ text }: { text: string }) {
         case '+':
         case '-':
         case '%': {
-          if (
-            displayValue.length === 0 ||
-            operators.includes(displayValue.slice(-1))
-          ) {
-            break;
+          if (CalcUtils.canAddOperator(displayValue)) {
+            calcType(text);
           }
-          calcType(text);
           break;
         }
         case '.': {
-          if (displayValue.length > 0 && displayValue.slice(-1) === '.') {
-            return;
+          if (CalcUtils.canAddDecimal(displayValue ?? '')) {
+            calcType(text);
           }
-          calcType(text);
           break;
         }
         default:
