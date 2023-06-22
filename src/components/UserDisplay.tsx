@@ -3,13 +3,13 @@ import { Button, Text } from '@mantine/core';
 import { useStore } from '../store/useStore';
 import { useNavigate } from 'react-router-dom';
 
-const UserDisplay = () => {
-  const { user, setUser } = useStore();
+type UserDisplayProps = {
+  onLogout: () => void;
+};
+const UserDisplay = ({ onLogout }: UserDisplayProps) => {
+  const { user } = useStore();
   const navigate = useNavigate();
-  const onLogout = () => {
-    setUser(null);
-    navigate('/login');
-  };
+
   return (
     <>
       {user ? (

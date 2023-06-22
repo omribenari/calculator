@@ -7,7 +7,7 @@ const HistoryPage = () => {
   const list = log.map((item, index) => {
     return (
       <List.Item key={index}>
-        <Badge variant="filled" size="lg">
+        <Badge variant="filled" size="lg" w={50}>
           {item}
         </Badge>
       </List.Item>

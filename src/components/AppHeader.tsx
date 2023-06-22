@@ -12,6 +12,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { Calculator } from 'tabler-icons-react';
 import { useStore } from '../store/useStore';
+import { useNavigate } from 'react-router-dom';
 import UserDisplay from './UserDisplay';
 import NavLinks from './NavLinks';
 
@@ -30,10 +31,19 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function AppHeader() {
+  const { user, setUser } = useStore();
+  const navigate = useNavigate();
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const { classes } = useStyles();
-  const { user } = useStore();
+
+  const onLogout = () => {
+    setUser(null);
+    if (drawerOpened) {
+      closeDrawer();
+    }
+    navigate('/login');
+  };
 
   return (
     <Box pb={120}>
@@ -52,7 +62,7 @@ export function AppHeader() {
           )}
 
           <Group className={classes.hiddenMobile}>
-            <UserDisplay />
+            <UserDisplay onLogout={onLogout} />
           </Group>
 
           <Burger
@@ -80,7 +90,7 @@ export function AppHeader() {
           <Divider my="sm" color={'gray.1'} />
 
           <Group position="center" grow pb="xl" px="md">
-            <UserDisplay />
+            <UserDisplay onLogout={onLogout} />
           </Group>
         </ScrollArea>
       </Drawer>

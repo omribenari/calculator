@@ -4,7 +4,7 @@ import CalcButton from './CalcButton';
 
 const Calculator = () => {
   return (
-    <Container w={300} mx="auto">
+    <Container miw={300} maw={600} mx="auto">
       <Grid gutter={3}>
         <Grid.Col span={12}>
           <CalcDisplay />

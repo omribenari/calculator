@@ -20,7 +20,7 @@ export const useStore = create<Store>()(
     (set, get) => ({
       user: null,
       isResult: false,
-      setUser: (user) => set(() => ({ user })),
+      setUser: (user) => set(() => ({ user, displayValue: '' })),
       displayValue: '',
       setResult: (value) =>
         set(() => ({ displayValue: value, isResult: true })),
