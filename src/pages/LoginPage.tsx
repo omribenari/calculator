@@ -9,11 +9,11 @@ import {
 import { isEmail, matches, useForm } from '@mantine/form';
 import { login } from '../auth/auth';
 import { useStore } from '../store/useStore';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { showErrorToast } from '../utils/Toast';
 
 export function LoginPage() {
-  const { setUser } = useStore();
+  const { user, setUser } = useStore();
   const navigate = useNavigate();
   const form = useForm({
     validateInputOnBlur: true,
@@ -43,6 +43,11 @@ export function LoginPage() {
       }
     }
   };
+
+  if (user) {
+    return <Navigate to="/" replace={true} />;
+  }
+
   return (
     <Container size={420} my={40}>
       <Title

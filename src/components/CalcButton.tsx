@@ -63,7 +63,7 @@ function CalcButton({ text }: { text: string }) {
             (displayValue.length > 0 &&
               operators.includes(displayValue.slice(-1)))
           ) {
-            return;
+            break;
           }
           calcType(text);
           break;

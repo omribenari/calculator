@@ -1,6 +1,6 @@
 import React from 'react';
 import { LoginPage } from './pages/LoginPage';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout';
 import CalculatorPage from './pages/CalculatorPage';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -28,7 +28,7 @@ function App() {
             }
           />
           <Route path="login" element={<LoginPage />} />
-          <Route path="*" element={<LoginPage />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Route>
       </Routes>
     </>
