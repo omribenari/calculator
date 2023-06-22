@@ -2,7 +2,6 @@ export interface User {
   name: string;
   email: string;
   password: string;
-  avatar: string;
 }
 
 interface LoginData {
@@ -15,7 +14,11 @@ const users: Array<User> = [
     name: 'Omri',
     email: 'omri79@gmail.com',
     password: 'Omri1234',
-    avatar: 'https://avatars.githubusercontent.com/u/10001?v=4',
+  },
+  {
+    name: 'Shaul',
+    email: 'Shaul@gmail.com',
+    password: 'Shaul1234',
   },
 ];
 

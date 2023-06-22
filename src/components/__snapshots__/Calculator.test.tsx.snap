@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Container-root mantine-1v5109t"
+  >
+    <div
+      class="mantine-Grid-root mantine-1eow0dc"
+    >
+      <div
+        class="mantine-Grid-col mantine-gt3psn"
+      >
+        <div
+          class="mantine-Text-root mantine-1v82c8f"
+          title=""
+        />
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="7"
+        >
+          7
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="8"
+        >
+          8
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="9"
+        >
+          9
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="*"
+        >
+          *
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="4"
+        >
+          4
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="5"
+        >
+          5
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="6"
+        >
+          6
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="%"
+        >
+          %
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="1"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="2"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="3"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="+"
+        >
+          +
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="0"
+        >
+          0
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="."
+        >
+          .
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="AC"
+        >
+          AC
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-1bp3v81"
+      >
+        <div
+          class="mantine-Text-root mantine-1tvbygw"
+          title="="
+        >
+          =
+        </div>
+      </div>
+      <div
+        class="mantine-Grid-col mantine-gt3psn"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
