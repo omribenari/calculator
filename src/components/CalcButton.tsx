@@ -60,8 +60,7 @@ function CalcButton({ text }: { text: string }) {
         case '%': {
           if (
             displayValue.length === 0 ||
-            (displayValue.length > 0 &&
-              operators.includes(displayValue.slice(-1)))
+            operators.includes(displayValue.slice(-1))
           ) {
             break;
           }
