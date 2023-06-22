@@ -1,3 +1,3 @@
 # React Calculator App
 
-(Live preview)[https://omribenari.github.io/calculator/]
+[Live preview](https://omribenari.github.io/calculator/)
